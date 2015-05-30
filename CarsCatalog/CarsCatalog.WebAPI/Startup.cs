@@ -14,5 +14,7 @@ namespace CarsCatalog.WebAPI
         {
             ConfigureAuth(app);
         }
+
+
     }
 }
