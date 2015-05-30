@@ -1,0 +1,34 @@
+<div class="container">
+<div class="row"> 
+	<div class="col-md-9">
+		<h1>Cars</h1>
+	</div>
+	<div class="col-md-3">
+	    Search: <input ng-model="searchText" class="form-control">
+	</div>
+
+</div>
+
+
+    <div class="jumbotron" ng-controller="CarsController" ng-repeat="car in cars | filter:searchText">
+			
+
+	    <div class="row">
+	    	<div class="col-md-6">
+	    		<img src="{{car.ImageUrl}}" class="image-regular"/>
+	    	</div>	    	
+	    	<div class="col-md-6">
+	    		<h2>{{car.Model}}</h2>
+	    		<H4>HorsePowers: {{car.HorsePowers}}</H4>
+	    		<H4>Year: {{car.Year}}</H4>
+	    		<H4>Rating: {{car.Rating}}</H4>
+	    		<H4><strong>Manufacturer: {{car.Manufacturer.Name}}</strong></H4>
+	    	</div>
+	    </div>
+
+    </div>
+
+
+
+
+</div>

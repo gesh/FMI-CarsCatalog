@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="well">
+        <form name="addManufacturerForm" class="form-horizontal" ng-controller="AddManufacturerController">
+            <fieldset>
+                <legend>Add new manufacturer</legend>
+
+                <div class="form-group">
+                    <label for="manufacturer-name" class="col-md-2 control-label">Manufacturer Name</label>
+                    <div class="col-md-10">
+                        <input id="manufacturer-name" type="text" placeholder="Manufacturer name" ng-model="manufacturer.Name" required="required" class="form-control"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="manufacturer-image" class="col-md-2 control-label">Manufacturer Image</label>
+                    <div class="col-md-10">
+                        <input id="manufacturer-image" type="text" placeholder="Manufacturer Image Url" ng-model="manufacturer.ImageUrl" required="required" class="form-control"/>
+                    </div>
+                </div>
+
+				<div class="pull-right">
+                    <button ng-click="postManufacturerData(manufacturer)" class="btn btn-primary">
+                        Create
+                    </button>
+                    <a href="#/" class="btn btn-primary">Cancel</a>
+                </div>
+               
+            </fieldset>
+        </form>
+    </div>
+</div>

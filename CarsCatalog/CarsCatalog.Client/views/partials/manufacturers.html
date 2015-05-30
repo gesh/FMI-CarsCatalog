@@ -1,0 +1,32 @@
+<div class="container">
+<div class="row"> 
+	<div class="col-md-9">
+		<h1>Manufacturers</h1>
+	</div>
+	<div class="col-md-3">
+	    Search: <input ng-model="searchText" class="form-control">
+	</div>
+
+</div>
+
+
+    <div class="jumbotron" ng-controller="ManufacturersController" ng-repeat="manufacturer in manufacturers | filter:searchText">
+			
+	    <div class="row">
+
+	    	<div class="col-md-6">
+	    		<img ng-show="manufacturer.ImageUrl === ''" src="http://cdn.flaticon.com/png/256/66599.png" class="image-icon"/>
+	    		<img ng-show="manufacturer.ImageUrl != ''" src="{{manufacturer.ImageUrl}}" class="image-icon"/>
+	    	</div>	    	
+	    	<div class="col-md-6">
+	    		<h2>Name: {{manufacturer.Name}}</h2>
+	    		<H4>Rating: {{manufacturer.Rating}}</H4>
+	    	</div>
+	    </div>
+
+    </div>
+
+
+
+
+</div>

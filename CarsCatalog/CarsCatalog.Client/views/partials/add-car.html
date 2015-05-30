@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="well">
+        <form name="addCarForm" class="form-horizontal" ng-controller="AddCarController">
+            <fieldset>
+                <legend>Add new car</legend>
+
+                <div class="form-group">
+                    <label for="car-model" class="col-md-2 control-label">Car Model</label>
+                    <div class="col-md-10">
+                        <input id="car-model" type="text" placeholder="Car model" ng-model="car.Model" required="required" class="form-control"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Year" class="col-md-2 control-label">Year</label>
+                    <div class="col-md-10">
+                        <input id="Year" type="text" placeholder="Year" ng-model="car.Year" required="required" class="form-control"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="HorsePowers" class="col-md-2 control-label">Horse Powers</label>
+                    <div class="col-md-10">
+                        <input id="HorsePowers" type="text" placeholder="HorsePowers" ng-model="car.HorsePowers" required="required" class="form-control"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="ImageUrl" class="col-md-2 control-label">Image Url</label>
+                    <div class="col-md-10">
+                        <input id="ImageUrl" type="text" placeholder="ImageUrl" ng-model="car.ImageUrl" required="required" class="form-control"/>
+                    </div>
+                </div>
+
+                 <div class="form-group">
+                    <label for="Manufacturer" class="col-md-2 control-label">Manufacturer</label>
+                    <div class="col-md-10">
+                        <input id="Manufacturer" type="text" placeholder="Manufacturer" ng-model="car.Manufacturer" required="required" class="form-control"/>
+                    </div>
+                </div>
+
+                <div class="pull-right">
+                    <button ng-click="postCarData(car)" class="btn btn-primary">
+                        Create
+                    </button>
+                    <a href="#/" class="btn btn-primary">Cancel</a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
