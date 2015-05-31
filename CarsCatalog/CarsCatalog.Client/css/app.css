@@ -37,11 +37,11 @@
 }
 
 input.ng-dirty.ng-invalid {
-    background-color: pink; !important
+    background-color: pink; 
 }
 
 input.ng-dirty.ng-valid.validity {
-    background-color: darkseagreen; !important
+    background-color: darkseagreen; 
 }
 
 .vertical-content {
