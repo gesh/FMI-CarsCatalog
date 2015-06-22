@@ -12,9 +12,11 @@ app.factory('manufacturersData', function($http, $log) {
 					$log.error(data);
 				})
 		},
-		postManufacturerData: function(manufacturer){
+		postManufacturerData: function (manufacturer) {
+		    console.log(manufacturer);
+
             $http.post(
-                'http://localhost:25632/api/manufacturers',
+                'http://localhost:1860/api/manufacturers',
                 JSON.stringify(manufacturer),
                 {
                     headers: {
@@ -25,6 +27,8 @@ app.factory('manufacturersData', function($http, $log) {
                 if(data){
                 	alert('success');
                 }
+            }).error(function(error){
+                console.log(error);
             });
 		}
 	}

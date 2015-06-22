@@ -4,7 +4,7 @@ app.factory('carsData', function($http, $log) {
 
 	return {
 		getCarsData: function(successCallBack) {
-			$http({ method: 'GET', url: 'http://localhost:25632/api/cars'})
+		    $http({ method: 'GET', url: 'http://localhost:1860/api/Cars' })
 				.success(function(data, status, headers, config) {
 					successCallBack(data);
 				})
@@ -12,9 +12,10 @@ app.factory('carsData', function($http, $log) {
 					$log.error(data);
 				})
 		},
-		postCarData: function(car){
+		postCarData: function (car) {
+		    console.log(JSON.stringify(car));
             $http.post(
-                'http://localhost:25632/api/cars',
+                'http://localhost:1860/api/Cars',
                 JSON.stringify(car),
                 {
                     headers: {
