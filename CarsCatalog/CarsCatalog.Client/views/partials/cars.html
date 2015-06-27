@@ -24,32 +24,45 @@
             <hr />
             
             <div class="row">
-                <div class="col-md-12">
-                    <div class="h2 text-center" style="margin: 0;">{{car.Model}}</div>
-                    <table>
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="h2 text-center" style="margin: 0 0 20px 0;">{{car.Model}}</div>
+                    <table class="table table-hover table-responsive">
                         <thead>
-                            <tr>
+                            <tr class="info">
                               <th>Attribute</th>
                               <th>Data</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                              <td>Attribute</td>
-                              <td>Data</td>
+                              <td>HorsePowers: </td>
+                              <td>{{car.HorsePowers}}</td>
                             </tr>
-
+                            <tr>
+                              <td>Year: </td>
+                              <td>{{car.Year}}</td>
+                            </tr>
+                            <tr>
+                              <td>Manufacturer: </td>
+                              <td>{{car.Manufacturer.Name}}</td>
+                            </tr>
+                            <tr>
+                              <td>Rating: </td>
+                              <td>{{car.Rating}}</td>
+                            </tr>
                         </tbody>
                     </table>
-
-                    <h5>HorsePowers: {{car.HorsePowers}}</h5>
-                    <h5>Year: {{car.Year}}</h5>
-                    <h5>Rating: {{car.Rating}}</h5>
-                    <h5><strong>Manufacturer: {{car.Manufacturer.Name}}</strong></h5>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-md-6 col-md-offset-1">
+                    <button type="button" class="btn btn-default">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star it!
+                    </button>
+                </div>
+            </div>
+
         </div>
-
     </div>
-
 </div>
