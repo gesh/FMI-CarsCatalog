@@ -14,7 +14,6 @@ using CarsCatalog.WebAPI.ViewModels;
 
 namespace CarsCatalog.WebAPI.Controllers
 {
-    [Authorize]
     public class CarsController : ApiController
     {
         private CarsCatalogContext db = new CarsCatalogContext();

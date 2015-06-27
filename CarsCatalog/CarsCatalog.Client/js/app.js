@@ -22,4 +22,4 @@ var app = angular.module('cars-catalog', ['ngRoute', 'ngResource', 'ngCookies'])
             .otherwise({ redirectTo: '/' });
     }])
     .value('toastr', toastr)
-    .constant('baseServiceUrl', 'http://localhost:23610');
+    .constant('baseServiceUrl', 'http://localhost:1860');

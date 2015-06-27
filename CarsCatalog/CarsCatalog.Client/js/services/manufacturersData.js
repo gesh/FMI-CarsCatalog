@@ -1,10 +1,10 @@
 'use strict';
 
-app.factory('manufacturersData', function($http, $log) {
+app.factory('manufacturersData', function($http, $log, baseServiceUrl) {
 
 	return {
 		getManufacturersData: function(successCallBack) {
-			$http({ method: 'GET', url: 'http://localhost:25632/api/manufacturers'})
+		    $http({ method: 'GET', url: baseServiceUrl + '/api/manufacturers' })
 				.success(function(data, status, headers, config) {
 					successCallBack(data);
 				})
@@ -16,7 +16,7 @@ app.factory('manufacturersData', function($http, $log) {
 		    console.log(manufacturer);
 
             $http.post(
-                'http://localhost:1860/api/manufacturers',
+                baseServiceUrl + '/api/manufacturers',
                 JSON.stringify(manufacturer),
                 {
                     headers: {
