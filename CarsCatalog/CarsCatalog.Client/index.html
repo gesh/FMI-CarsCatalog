@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/toastr.min.css" />
     <link rel="stylesheet" href="css/app.css" />
 </head>
-<body ng-app="cars-catalog" ng-cloak>
+<body ng-app="cars-catalog" ng-controller="IndexCtrl" ng-cloak>
     <div class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
@@ -36,6 +36,9 @@
                         <li>
                             <a href="#/add-car">Add Car</a>
                         </li>
+                        <li>
+                            <a ng-click="loginDialog('lg')">Login</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -49,14 +52,17 @@
 
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/toastr/toastr.min.js"></script>
-    <script src="lib/bootstrap/ui-bootstrap-custom-tpls-0.13.0.js"></script>
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular/angular-resource.min.js"></script>
     <script src="lib/angular/angular-route.min.js"></script>
     <script src="lib/angular/angular-cookies.min.js"></script>
+    <script src="lib/bootstrap/ui-bootstrap-custom-tpls-0.13.0.js"></script>
+
     <script src="js/app.js"></script>
     <script src="js/services/carsData.js"></script>
     <script src="js/services/manufacturersData.js"></script>
+    <script src="js/controllers/IndexCtrl.js"></script>
+    <script src="js/controllers/LoginDialogCtrl.js"></script>
     <script src="js/controllers/CarsController.js"></script>
     <script src="js/controllers/ManufacturersController.js"></script>
     <script src="js/controllers/AddCarController.js"></script>
