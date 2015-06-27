@@ -14,7 +14,7 @@ app.factory('carsData', function($http, $log, baseServiceUrl) {
 		},
 		postCarData: function (car) {
 		    console.log(JSON.stringify(car));
-            $http.post(
+		    return $http.post(
                 baseServiceUrl + '/api/Cars',
                 JSON.stringify(car),
                 {
@@ -22,11 +22,7 @@ app.factory('carsData', function($http, $log, baseServiceUrl) {
                         'Content-Type': 'application/json'
                     }
                 }
-            ).success(function (data) {
-                if(data){
-                	alert('success');
-                }
-            });
+            );
 		}
 	}
 
