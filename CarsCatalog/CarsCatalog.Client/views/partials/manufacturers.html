@@ -14,7 +14,7 @@
             <div ng-repeat="manufacturer in manufacturers | filter:searchText"
                  class="jumbotron">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-2">
                         <img ng-show="manufacturer.ImageUrl === ''"
                              src="http://cdn.flaticon.com/png/256/66599.png"
                              class="img-circle img-responsive" />
@@ -22,9 +22,22 @@
                              src="{{manufacturer.ImageUrl}}"
                              class="img-circle img-responsive" />
                     </div>
-                    <div class="col-md-6">
-                        <h2>Name: {{manufacturer.Name}}</h2>
-                        <h4>Rating: {{manufacturer.Rating}}</h4>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>Name: {{manufacturer.Name}}</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>Rating: {{manufacturer.Rating}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <p>
+
+                        </p>
                     </div>
                 </div>
             </div>
