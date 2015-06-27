@@ -3,9 +3,8 @@
         {{msg}}
         <button ng-click="anotherOne()">Add another</button>
     </div>
-    <div ng-show="status.inProg">
-        in prog
-
+    <div>
+        <span us-spinner spinner-key="spinner-add-cars"></span>
     </div>
     <div class="well" ng-show="!status.done || status.inProg">
         <form name="addCarForm" class="form-horizontal">
@@ -50,7 +49,7 @@
                     {{status.error}}
                 </div>
                 <div class="pull-right">
-                    <input type="submit" ng-click="postCarData(car,addCarForm)" class="btn btn-primary" value="Create" />
+                    <input type="submit" ng-click="postCarData(car,addCarForm)" ng-disabled="!addCarForm.$valid" class="btn btn-primary" value="Create" />
                     <a href="#/" class="btn btn-primary">Cancel</a>
                 </div>
             </fieldset>

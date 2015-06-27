@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('cars-catalog', ['ngRoute', 'ngResource', 'ngCookies','ui.bootstrap']).
+var app = angular.module('cars-catalog', ['ngRoute', 'ngResource', 'ngCookies', 'ui.bootstrap', 'angularSpinner']).
     config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/manufacturers', {
@@ -23,3 +23,7 @@ var app = angular.module('cars-catalog', ['ngRoute', 'ngResource', 'ngCookies','
     }])
     .value('toastr', toastr)
     .constant('baseServiceUrl', 'http://localhost:1860');
+
+app.config(['usSpinnerConfigProvider', function (usSpinnerConfigProvider) {
+    usSpinnerConfigProvider.setDefaults({ color: 'blue' });
+}]);

@@ -62,6 +62,9 @@
     <Content Include="js\controllers\IndexCtrl.js" />
     <Content Include="js\controllers\LoginDialogCtrl.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="js\services\userData.js" />
+    <Content Include="js\services\commentsData.js" />
+    <Content Include="lib\angular-spinner.js" />
     <Content Include="lib\angular\angular-animate.min.js.map" />
     <Content Include="lib\angular\angular-aria.min.js.map" />
     <Content Include="lib\angular\angular-cookies.min.js.map" />
@@ -76,6 +79,7 @@
     <Content Include="lib\angular\errors.json" />
     <Content Include="lib\angular\version.json" />
     <Content Include="lib\bootstrap\ui-bootstrap-custom-tpls-0.13.0.js" />
+    <Content Include="lib\spin.js" />
     <Content Include="lib\toastr\toastr.min.js.map" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
