@@ -48,7 +48,11 @@
                             </tr>
                             <tr>
                               <td>Rating: </td>
-                              <td>{{car.Rating}}</td>
+                              <td>
+                                {{car.Rating}}
+                                <rating ng-model="car.Year" readonly="true"></rating>
+                                <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
+                              </td>
                             </tr>
                         </tbody>
                     </table>
