@@ -67,6 +67,7 @@ img{
 body {
     background-image: url("../img/index.jpg");
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: 1500px;
 }
 

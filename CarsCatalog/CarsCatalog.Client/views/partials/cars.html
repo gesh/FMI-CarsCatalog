@@ -13,62 +13,65 @@
          class="row">
 
         <div ng-repeat="car in cars | filter:searchText"
-             class="panel col-md-4" style="padding: 15px; margin: 10px;" 
-             onmouseover="this.style.outline = '1px solid #ffffff';"
-             onmouseout="this.style.outline = 'none';">
+             class="col-md-4">
 
-            <div class="row">
-                <div class="panel-title col-md-12" style="text-align:center; min-height: 50px;">
-                    <img src="{{car.ImageUrl}}" class="img-responsive center-block" alt="No image found" />
+            <div class="panel" style="padding: 15px;"
+                 onmouseover="this.style.outline = '1px solid #ffffff';"
+                 onmouseout="this.style.outline = 'none';">
+
+                <div class="row">
+                    <div class="panel-title col-md-12" style="text-align:center; min-height: 50px;">
+                        <img src="{{car.ImageUrl}}" class="img-responsive center-block" alt="No image found" />
+                    </div>
                 </div>
-            </div>
 
-            <hr />
-            
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="h2 text-center" style="margin: 0 0 20px 0;">{{car.Model}}</div>
-                    <table class="table table-hover table-responsive">
-                        <thead>
-                            <tr class="info">
-                              <th>Attribute</th>
-                              <th>Data</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                              <td>HorsePowers: </td>
-                              <td>{{car.HorsePowers}}</td>
-                            </tr>
-                            <tr>
-                              <td>Year: </td>
-                              <td>{{car.Year}}</td>
-                            </tr>
-                            <tr>
-                              <td>Manufacturer: </td>
-                              <td>{{car.Manufacturer.Name}}</td>
-                            </tr>
-                            <tr>
-                              <td>Rating: </td>
-                              <td>
-                                {{car.Rating}}
-                                <rating ng-model="" readonly="true"></rating>
-                                <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
-                              </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <hr />
+
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="h2 text-center" style="margin: 0 0 20px 0;">{{car.Model}}</div>
+                        <table class="table table-hover table-responsive">
+                            <thead>
+                                <tr class="info">
+                                    <th>Attribute</th>
+                                    <th>Data</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>HorsePowers: </td>
+                                    <td>{{car.HorsePowers}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Year: </td>
+                                    <td>{{car.Year}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Manufacturer: </td>
+                                    <td>{{car.Manufacturer.Name}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Rating: </td>
+                                    <td>
+                                        {{car.Rating}}
+                                        <rating ng-model="" readonly="true"></rating>
+                                        <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-md-6 col-md-offset-1">
-                    <button type="button" class="btn btn-default">
-                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star it!
-                    </button>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-1">
+                        <button type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star it!
+                        </button>
+                    </div>
                 </div>
-            </div>
 
-        </div>
+            </div>
+            </div>
     </div>
 </div>
