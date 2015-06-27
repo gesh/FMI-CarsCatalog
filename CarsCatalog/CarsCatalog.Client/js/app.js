@@ -19,7 +19,7 @@ var app = angular.module('cars-catalog', ['ngRoute', 'ngResource', 'ngCookies'])
                 templateUrl: 'views/partials/add-car.html',
                 controller: 'AddCarController'
             })
-            .otherwise({ redirectTo: '/' });
+            .otherwise({ redirectTo: '/cars' });
     }])
     .value('toastr', toastr)
     .constant('baseServiceUrl', 'http://localhost:1860');
