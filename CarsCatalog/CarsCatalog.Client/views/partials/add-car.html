@@ -3,8 +3,11 @@
         {{msg}}
         <button ng-click="anotherOne()">Add another</button>
     </div>
+    <div ng-show="status.inProg">
+        in prog
 
-    <div class="well" ng-show="!status.done">
+    </div>
+    <div class="well" ng-show="!status.done || status.inProg">
         <form name="addCarForm" class="form-horizontal">
             <fieldset>
                 <legend>Add new car</legend>
@@ -43,9 +46,11 @@
                         <input id="Manufacturer" type="text" placeholder="Manufacturer" ng-model="car.Manufacturer" required="required" class="form-control" />
                     </div>
                 </div>
-
+                <div>
+                    {{status.error}}
+                </div>
                 <div class="pull-right">
-                    <input type="submit" ng-click="postCarData(car)" class="btn btn-primary" value="Create" />
+                    <input type="submit" ng-click="postCarData(car,addCarForm)" class="btn btn-primary" value="Create" />
                     <a href="#/" class="btn btn-primary">Cancel</a>
                 </div>
             </fieldset>
