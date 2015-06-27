@@ -2,10 +2,10 @@
 
     <div class="row">
         <div class="col-md-9">
-            <h1>Cars</h1>
+            <h1 style="color: #ffffff;">Cars</h1>
         </div>
-        <div class="col-md-3">
-            <input ng-model="searchText" class="form-control" placeholder="Search for a car" />
+        <div class="col-md-3 form-group">
+            <input ng-model="searchText" class="form-control" type="text" placeholder="Search for a car" />
         </div>
     </div>
 
@@ -13,7 +13,9 @@
          class="row">
 
         <div ng-repeat="car in cars | filter:searchText"
-             class="panel col-md-4" style="padding: 15px;">
+             class="panel col-md-4" style="padding: 15px; margin: 10px;" 
+             onmouseover="this.style.outline = '1px solid #ffffff';"
+             onmouseout="this.style.outline = 'none';">
 
             <div class="row">
                 <div class="panel-title col-md-12" style="text-align:center; min-height: 50px;">
@@ -50,7 +52,7 @@
                               <td>Rating: </td>
                               <td>
                                 {{car.Rating}}
-                                <rating ng-model="car.Year" readonly="true"></rating>
+                                <rating ng-model="" readonly="true"></rating>
                                 <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
                               </td>
                             </tr>
