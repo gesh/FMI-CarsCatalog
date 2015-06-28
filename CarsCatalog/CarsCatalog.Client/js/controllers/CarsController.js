@@ -1,10 +1,8 @@
 'use strict';
 
-app.controller('CarsController', function CarsController ($scope, carsData) {
+app.controller('CarsController', function CarsController ($scope, carsDataSrv) {
 
-
-	carsData.getCarsData(function(data){
-		//console.log(data);
+	carsDataSrv.getData().then(function(data){
 		$scope.cars = data;
 		console.log($scope.cars);
 	});

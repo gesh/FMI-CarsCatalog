@@ -64,51 +64,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="js\services\userData.js" />
     <Content Include="js\services\commentsData.js" />
+    <Content Include="js\services\userSrv.js" />
     <Content Include="lib\angular-spinner.js" />
-    <Content Include="lib\angular\angular-animate.min.js.map" />
-    <Content Include="lib\angular\angular-aria.min.js.map" />
-    <Content Include="lib\angular\angular-cookies.min.js.map" />
-    <Content Include="lib\angular\angular-loader.min.js.map" />
-    <Content Include="lib\angular\angular-messages.min.js.map" />
-    <Content Include="lib\angular\angular-resource.min.js.map" />
-    <Content Include="lib\angular\angular-route.min.js.map" />
-    <Content Include="lib\angular\angular-sanitize.min.js.map" />
-    <Content Include="lib\angular\angular-touch.min.js.map" />
-    <Content Include="lib\angular\angular.min.js.gzip" />
-    <Content Include="lib\angular\angular.min.js.map" />
-    <Content Include="lib\angular\errors.json" />
-    <Content Include="lib\angular\version.json" />
-    <Content Include="lib\bootstrap\ui-bootstrap-custom-tpls-0.13.0.js" />
-    <Content Include="lib\spin.js" />
-    <Content Include="lib\toastr\toastr.min.js.map" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="css\app.css" />
-    <Content Include="css\bootstrap-theme.css" />
-    <Content Include="css\bootstrap-theme.min.css" />
-    <Content Include="css\bootstrap.css" />
-    <Content Include="css\bootstrap.min.css" />
-    <Content Include="css\toastr.css" />
-    <Content Include="css\toastr.min.css" />
-    <Content Include="img\index.jpg" />
-    <Content Include="index.html" />
-    <Content Include="js\app.js" />
-    <Content Include="js\controllers\AddCarController.js" />
-    <Content Include="js\controllers\AddManufacturerController.js" />
-    <Content Include="js\controllers\CarsController.js" />
-    <Content Include="js\controllers\ManufacturersController.js" />
-    <Content Include="js\services\carsData.js" />
-    <Content Include="js\services\manufacturersData.js" />
     <Content Include="lib\angular\angular-animate.js" />
     <Content Include="lib\angular\angular-animate.min.js" />
     <Content Include="lib\angular\angular-aria.js" />
@@ -195,6 +152,8 @@
     <Content Include="lib\angular\i18n\angular-locale_bez.js" />
     <Content Include="lib\angular\i18n\angular-locale_bg-bg.js" />
     <Content Include="lib\angular\i18n\angular-locale_bg.js" />
+    <Content Include="lib\angular\i18n\angular-locale_bm-latn-ml.js" />
+    <Content Include="lib\angular\i18n\angular-locale_bm-latn.js" />
     <Content Include="lib\angular\i18n\angular-locale_bm-ml.js" />
     <Content Include="lib\angular\i18n\angular-locale_bm.js" />
     <Content Include="lib\angular\i18n\angular-locale_bn-bd.js" />
@@ -250,6 +209,8 @@
     <Content Include="lib\angular\i18n\angular-locale_de.js" />
     <Content Include="lib\angular\i18n\angular-locale_dje-ne.js" />
     <Content Include="lib\angular\i18n\angular-locale_dje.js" />
+    <Content Include="lib\angular\i18n\angular-locale_dsb-de.js" />
+    <Content Include="lib\angular\i18n\angular-locale_dsb.js" />
     <Content Include="lib\angular\i18n\angular-locale_dua-cm.js" />
     <Content Include="lib\angular\i18n\angular-locale_dua.js" />
     <Content Include="lib\angular\i18n\angular-locale_dyo-sn.js" />
@@ -283,8 +244,6 @@
     <Content Include="lib\angular\i18n\angular-locale_en-cx.js" />
     <Content Include="lib\angular\i18n\angular-locale_en-dg.js" />
     <Content Include="lib\angular\i18n\angular-locale_en-dm.js" />
-    <Content Include="lib\angular\i18n\angular-locale_en-dsrt-us.js" />
-    <Content Include="lib\angular\i18n\angular-locale_en-dsrt.js" />
     <Content Include="lib\angular\i18n\angular-locale_en-er.js" />
     <Content Include="lib\angular\i18n\angular-locale_en-fj.js" />
     <Content Include="lib\angular\i18n\angular-locale_en-fk.js" />
@@ -320,6 +279,7 @@
     <Content Include="lib\angular\i18n\angular-locale_en-mt.js" />
     <Content Include="lib\angular\i18n\angular-locale_en-mu.js" />
     <Content Include="lib\angular\i18n\angular-locale_en-mw.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-my.js" />
     <Content Include="lib\angular\i18n\angular-locale_en-na.js" />
     <Content Include="lib\angular\i18n\angular-locale_en-nf.js" />
     <Content Include="lib\angular\i18n\angular-locale_en-ng.js" />
@@ -467,6 +427,7 @@
     <Content Include="lib\angular\i18n\angular-locale_gl-es.js" />
     <Content Include="lib\angular\i18n\angular-locale_gl.js" />
     <Content Include="lib\angular\i18n\angular-locale_gsw-ch.js" />
+    <Content Include="lib\angular\i18n\angular-locale_gsw-fr.js" />
     <Content Include="lib\angular\i18n\angular-locale_gsw-li.js" />
     <Content Include="lib\angular\i18n\angular-locale_gsw.js" />
     <Content Include="lib\angular\i18n\angular-locale_gu-in.js" />
@@ -489,6 +450,8 @@
     <Content Include="lib\angular\i18n\angular-locale_hr-ba.js" />
     <Content Include="lib\angular\i18n\angular-locale_hr-hr.js" />
     <Content Include="lib\angular\i18n\angular-locale_hr.js" />
+    <Content Include="lib\angular\i18n\angular-locale_hsb-de.js" />
+    <Content Include="lib\angular\i18n\angular-locale_hsb.js" />
     <Content Include="lib\angular\i18n\angular-locale_hu-hu.js" />
     <Content Include="lib\angular\i18n\angular-locale_hu.js" />
     <Content Include="lib\angular\i18n\angular-locale_hy-am.js" />
@@ -563,6 +526,8 @@
     <Content Include="lib\angular\i18n\angular-locale_ky.js" />
     <Content Include="lib\angular\i18n\angular-locale_lag-tz.js" />
     <Content Include="lib\angular\i18n\angular-locale_lag.js" />
+    <Content Include="lib\angular\i18n\angular-locale_lb-lu.js" />
+    <Content Include="lib\angular\i18n\angular-locale_lb.js" />
     <Content Include="lib\angular\i18n\angular-locale_lg-ug.js" />
     <Content Include="lib\angular\i18n\angular-locale_lg.js" />
     <Content Include="lib\angular\i18n\angular-locale_lkt-us.js" />
@@ -606,12 +571,10 @@
     <Content Include="lib\angular\i18n\angular-locale_mn.js" />
     <Content Include="lib\angular\i18n\angular-locale_mr-in.js" />
     <Content Include="lib\angular\i18n\angular-locale_mr.js" />
-    <Content Include="lib\angular\i18n\angular-locale_ms-bn.js" />
     <Content Include="lib\angular\i18n\angular-locale_ms-latn-bn.js" />
     <Content Include="lib\angular\i18n\angular-locale_ms-latn-my.js" />
     <Content Include="lib\angular\i18n\angular-locale_ms-latn-sg.js" />
     <Content Include="lib\angular\i18n\angular-locale_ms-latn.js" />
-    <Content Include="lib\angular\i18n\angular-locale_ms-my.js" />
     <Content Include="lib\angular\i18n\angular-locale_ms.js" />
     <Content Include="lib\angular\i18n\angular-locale_mt-mt.js" />
     <Content Include="lib\angular\i18n\angular-locale_mt.js" />
@@ -680,6 +643,10 @@
     <Content Include="lib\angular\i18n\angular-locale_pt-st.js" />
     <Content Include="lib\angular\i18n\angular-locale_pt-tl.js" />
     <Content Include="lib\angular\i18n\angular-locale_pt.js" />
+    <Content Include="lib\angular\i18n\angular-locale_qu-bo.js" />
+    <Content Include="lib\angular\i18n\angular-locale_qu-ec.js" />
+    <Content Include="lib\angular\i18n\angular-locale_qu-pe.js" />
+    <Content Include="lib\angular\i18n\angular-locale_qu.js" />
     <Content Include="lib\angular\i18n\angular-locale_rm-ch.js" />
     <Content Include="lib\angular\i18n\angular-locale_rm.js" />
     <Content Include="lib\angular\i18n\angular-locale_rn-bi.js" />
@@ -708,6 +675,7 @@
     <Content Include="lib\angular\i18n\angular-locale_sbp.js" />
     <Content Include="lib\angular\i18n\angular-locale_se-fi.js" />
     <Content Include="lib\angular\i18n\angular-locale_se-no.js" />
+    <Content Include="lib\angular\i18n\angular-locale_se-se.js" />
     <Content Include="lib\angular\i18n\angular-locale_se.js" />
     <Content Include="lib\angular\i18n\angular-locale_seh-mz.js" />
     <Content Include="lib\angular\i18n\angular-locale_seh.js" />
@@ -726,6 +694,8 @@
     <Content Include="lib\angular\i18n\angular-locale_sk.js" />
     <Content Include="lib\angular\i18n\angular-locale_sl-si.js" />
     <Content Include="lib\angular\i18n\angular-locale_sl.js" />
+    <Content Include="lib\angular\i18n\angular-locale_smn-fi.js" />
+    <Content Include="lib\angular\i18n\angular-locale_smn.js" />
     <Content Include="lib\angular\i18n\angular-locale_sn-zw.js" />
     <Content Include="lib\angular\i18n\angular-locale_sn.js" />
     <Content Include="lib\angular\i18n\angular-locale_so-dj.js" />
@@ -840,6 +810,8 @@
     <Content Include="lib\angular\i18n\angular-locale_xog.js" />
     <Content Include="lib\angular\i18n\angular-locale_yav-cm.js" />
     <Content Include="lib\angular\i18n\angular-locale_yav.js" />
+    <Content Include="lib\angular\i18n\angular-locale_yi-001.js" />
+    <Content Include="lib\angular\i18n\angular-locale_yi.js" />
     <Content Include="lib\angular\i18n\angular-locale_yo-bj.js" />
     <Content Include="lib\angular\i18n\angular-locale_yo-ng.js" />
     <Content Include="lib\angular\i18n\angular-locale_yo.js" />
@@ -861,17 +833,67 @@
     <Content Include="lib\angular\i18n\angular-locale_zu-za.js" />
     <Content Include="lib\angular\i18n\angular-locale_zu.js" />
     <Content Include="lib\angular\version.txt" />
+    <Content Include="lib\bootstrap\ui-bootstrap-custom-tpls-0.13.0.js" />
+    <Content Include="lib\lodash.js" />
+    <Content Include="lib\restangular.js" />
+    <Content Include="lib\spin.js" />
+    <Content Include="lib\toastr\toastr.min.js.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="lib\angular\angular-animate.min.js.map" />
+    <Content Include="lib\angular\angular-aria.min.js.map" />
+    <Content Include="lib\angular\angular-cookies.min.js.map" />
+    <Content Include="lib\angular\angular-loader.min.js.map" />
+    <Content Include="lib\angular\angular-messages.min.js.map" />
+    <Content Include="lib\angular\angular-resource.min.js.map" />
+    <Content Include="lib\angular\angular-route.min.js.map" />
+    <Content Include="lib\angular\angular-sanitize.min.js.map" />
+    <Content Include="lib\angular\angular-touch.min.js.map" />
+    <Content Include="lib\angular\angular.min.js.map" />
+    <Content Include="lib\angular\errors.json" />
+    <Content Include="lib\angular\version.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\app.css" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\toastr.css" />
+    <Content Include="css\toastr.min.css" />
+    <Content Include="img\index.jpg" />
+    <Content Include="index.html" />
+    <Content Include="js\app.js" />
+    <Content Include="js\controllers\AddCarController.js" />
+    <Content Include="js\controllers\AddManufacturerController.js" />
+    <Content Include="js\controllers\CarsController.js" />
+    <Content Include="js\controllers\ManufacturersController.js" />
+    <Content Include="js\services\carsData.js" />
+    <Content Include="js\services\manufacturersData.js" />
     <Content Include="lib\jquery\jquery.min.js" />
     <Content Include="lib\toastr\toastr.js" />
     <Content Include="lib\toastr\toastr.min.js" />
     <Content Include="views\partials\add-car.html" />
     <Content Include="views\partials\add-manufacturer.html" />
     <Content Include="views\partials\cars.html" />
+    <Content Include="views\partials\register.html" />
+    <Content Include="views\partials\login.html" />
     <Content Include="views\partials\manufacturers.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="lib\angular\i18n\ngLocale\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,18 +1,15 @@
 'use strict';
 
-app.factory('carsData', function($http, $log, baseServiceUrl) {
+app.factory('carsDataSrv', function($http, $log, Restangular, baseServiceUrl) {
+
+    var path = '/api/Cars';
+    var carApi = Restangular.allUrl('Cars', baseServiceUrl + path);
 
 	return {
-		getCarsData: function(successCallBack) {
-		    $http({ method: 'GET', url: baseServiceUrl + '/api/Cars' })
-				.success(function(data, status, headers, config) {
-					successCallBack(data);
-				})
-				.error(function(data, status, headers, config) {
-					$log.error(data);
-				})
+		getData: function() {
+		    return carApi.getList();
 		},
-		postCarData: function (car) {
+		postData: function (car) {
 		    console.log(JSON.stringify(car));
 		    return $http.post(
                 baseServiceUrl + '/api/Cars',

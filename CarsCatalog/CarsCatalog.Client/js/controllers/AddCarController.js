@@ -1,6 +1,7 @@
 'use strict';
 
-app.controller('AddCarController', function AddCarController($scope, carsData, usSpinnerService) {
+app.controller('AddCarController', function AddCarController($scope, carsDataSrv, usSpinnerService) {
+
     $scope.status = { done: false };
     $scope.anotherOne = function () {
         $scope.status.done = false;
@@ -21,7 +22,7 @@ app.controller('AddCarController', function AddCarController($scope, carsData, u
         $scope.status.error = "";
         $scope.status.inProg = true;
         $scope.startSpin();
-	    carsData.postCarData(car).then(function (data) {
+	    carsDataSrv.postData(car).then(function (data) {
 	        $scope.msg = "Done";
 	        $scope.status.done = true;
 	        $scope.status.inProg = false;

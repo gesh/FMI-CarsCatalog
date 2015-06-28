@@ -1,10 +1,10 @@
 'use strict';
 
-app.factory('carsData', function($http, $log, baseServiceUrl) {
+app.factory('commentsData', function($http, $log, baseServiceUrl) {
 
 	return {
-		getCarsData: function(successCallBack) {
-		    $http({ method: 'GET', url: baseServiceUrl + '/api/Cars' })
+		getData: function(carId,successCallBack) {
+		    $http({ method: 'GET', url: baseServiceUrl + '/api/Comments/'+carId })
 				.success(function(data, status, headers, config) {
 					successCallBack(data);
 				})
@@ -12,10 +12,10 @@ app.factory('carsData', function($http, $log, baseServiceUrl) {
 					$log.error(data);
 				})
 		},
-		postCarData: function (car) {
+		postData: function (car) {
 		    console.log(JSON.stringify(car));
 		    return $http.post(
-                baseServiceUrl + '/api/Cars',
+                baseServiceUrl + '/api/Comments',
                 JSON.stringify(car),
                 {
                     headers: {
