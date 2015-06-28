@@ -98,7 +98,7 @@ namespace CarsCatalog.WebAPI.Controllers
             car.ManufacturerID = db.Manufacturers.FirstOrDefault(m => m.Name == carVM.Manufacturer).ID;
             car.Model = carVM.Model;
             car.Year = carVM.Year;
-            car.ImageUrl = carVM.ImageUrl;
+            car.ImageUrl = carVM.ImageUrl != null ? carVM.ImageUrl : "http://www.agentleadz.com/wp-content/uploads/2014/11/favicon.png";
             car.HorsePowers = carVM.HorsePowers;
             car.Information = carVM.Information;
 

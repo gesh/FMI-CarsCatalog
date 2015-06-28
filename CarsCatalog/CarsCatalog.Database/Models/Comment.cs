@@ -14,16 +14,16 @@ namespace CarsCatalog.Database.Models
 
         public string AuthorID { get; set; }
 
-        public int CarID { get; set; }
+        public string AuthorName { get; set; }
 
+        public int CarID { get; set; }
+        
         public string Title { get; set; }
 
         public string Body { get; set; }
 
         public double Rating { get; set; }
-
-        public virtual ApplicationUser Author { get; set; }
-
+        
         public virtual Car Car { get; set; }
 
     }

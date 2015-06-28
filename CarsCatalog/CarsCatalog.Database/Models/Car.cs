@@ -23,6 +23,9 @@ namespace CarsCatalog.Database.Models
         public string Information { get; set; }
         
         public int ManufacturerID { get; set; }
+
+        public virtual ICollection<Comment> Comments { get; set; }
+
         public virtual Manufacturer Manufacturer { get; set; }
     }
 }
