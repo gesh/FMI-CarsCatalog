@@ -10,6 +10,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using CarsCatalog.Database;
 using CarsCatalog.Database.Models;
+using CarsCatalog.WebAPI.ViewModels;
 
 namespace CarsCatalog.WebAPI.Controllers
 {
@@ -73,18 +74,37 @@ namespace CarsCatalog.WebAPI.Controllers
         }
 
         // POST: api/Cars
-        [ResponseType(typeof(Car))]
-        public IHttpActionResult PostCar(Car car)
+        [HttpPost]
+        public IHttpActionResult PostCar(CarViewModel carVM)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Cars.Add(car);
-            db.SaveChanges();
+            var car = new Car();
 
-            return CreatedAtRoute("DefaultApi", new { id = car.ID }, car);
+            var manufacturer = db.Manufacturers.FirstOrDefault(m => m.Name == carVM.Manufacturer);
+
+            if (manufacturer == null)
+            {
+                db.Manufacturers.Add(new Manufacturer()
+                {
+                    Name = carVM.Manufacturer,
+                    ImageUrl = "http://cdn.flaticon.com/png/256/66599.png"
+                });
+                db.SaveChanges();
+            }
+            car.ManufacturerID = db.Manufacturers.FirstOrDefault(m => m.Name == carVM.Manufacturer).ID;
+            car.Model = carVM.Model;
+            car.Year = carVM.Year;
+            car.ImageUrl = carVM.ImageUrl != null ? carVM.ImageUrl : "http://www.agentleadz.com/wp-content/uploads/2014/11/favicon.png";
+            car.HorsePowers = carVM.HorsePowers;
+            car.Information = carVM.Information;
+
+            db.Cars.Add(car);
+            var res = db.SaveChanges();
+            return Ok(res);
         }
 
         // DELETE: api/Cars/5

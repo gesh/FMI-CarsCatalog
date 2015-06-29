@@ -15,7 +15,6 @@ namespace CarsCatalog.WebAPI
         public static void Register(HttpConfiguration config)
         {
             config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
-            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
             // Web API configuration and services
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();
@@ -29,8 +28,8 @@ namespace CarsCatalog.WebAPI
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-           
-            //config.EnableCors();
+
+            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
         }
     }
 }

@@ -19,7 +19,6 @@ namespace CarsCatalog.WebAPI.Controllers
         private CarsCatalogContext db = new CarsCatalogContext();
 
         // GET: api/Manufacturers
-        [HttpGet]
         public IQueryable<Manufacturer> GetManufacturers()
         {
             return db.Manufacturers;
