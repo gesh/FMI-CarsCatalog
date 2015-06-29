@@ -2,6 +2,18 @@ html {
     overflow-y: scroll;
 }
 
+map, div[map] {
+    display: block;
+    width: 100%;
+    height: 400px;
+}
+
+.map {
+    width: 100%;
+    height: 400px;
+    margin: auto;
+}
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;

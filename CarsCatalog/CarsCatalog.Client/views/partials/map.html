@@ -21,19 +21,6 @@
          center="[42.7,23.3]"
          zoom-control="true"
          zoom="12" >
-        
-    
-        <marker ng-repeat="$shop in data.rows"
-                id="shopMarkerId{{::$shop.shop_id}}"
-                position="[{{::$shop.shop_latitude}},{{::$shop.shop_longitude}}]"
-                anchorPoint=""
-                icon="{{::getShopImagePath($shop)}}"
-                shape="{{::iconShape}}"
-                on-click="showInfoWindow(event, $shop,'shopMarkerId'+$shop.shop_id)"
-                title="{{::$shop.shop_name}}" >
-        </marker>
-
-
     </map>
 </div>
 <!--
