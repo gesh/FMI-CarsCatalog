@@ -90,13 +90,13 @@ body {
 .car { margin: 0; }
 .car:hover + .comments {
     z-index: 10;
-    display: block;
+    visibility: visible;
 }
 
 .comments {
     padding: 15px;
     background-color: #ffffff;
-    display: none;
+    visibility: hidden;
 }
 .comments:hover {
     display: block;
