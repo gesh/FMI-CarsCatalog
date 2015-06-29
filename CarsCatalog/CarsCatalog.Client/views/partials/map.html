@@ -1,0 +1,59 @@
+﻿<div class="modal-header map-header">
+    
+    <div class="modal-title map-title">
+        <span class="h4">Autodealers Houses</span>
+        
+        <!-- "Close" dialog button -->
+        <button ng-click="ok()"
+                type="button"
+                class="close map-title-close"
+                aria-label="Close"
+                data-toggle="tooltip"
+                data-placement="top"
+                data-original-title="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    
+</div>
+<div class="modal-body" map-lazy-load="http://maps.google.com/maps/api/js">
+    <map ng-if="mapOpts.render"
+         center="[42.7,23.3]"
+         zoom-control="true"
+         zoom="12" >
+        
+    
+        <marker ng-repeat="$shop in data.rows"
+                id="shopMarkerId{{::$shop.shop_id}}"
+                position="[{{::$shop.shop_latitude}},{{::$shop.shop_longitude}}]"
+                anchorPoint=""
+                icon="{{::getShopImagePath($shop)}}"
+                shape="{{::iconShape}}"
+                on-click="showInfoWindow(event, $shop,'shopMarkerId'+$shop.shop_id)"
+                title="{{::$shop.shop_name}}" >
+        </marker>
+
+
+    </map>
+</div>
+<!--
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="debug()" ng-if="false">Debug</button>
+</div>
+-->
+
+<!-- <info-window id="{{shop.shop_id}}infowindow"
+                     max-width="200"  
+                     ng-repeat="shop in shopsData.getInnerDataRows()">
+            <div>
+                <h1><img ng-src="{{brandsImagesUrl}}{{shop.shop_brand_id}}{{brandsImagesUrlExt}}"
+                         class="col-md-4"/>
+                    {{shop.shop_name}}</h1>
+                <p>Адрес: {{shop.shop_location}} {{brandsImagesUrl}}</p>
+                <p>Телефон: {{shop.shop_phone}}</p>
+                <p>Работно време: </p>
+                <p>Пон-петък: {{shop.shop_opens}} -{{shop.shop_closes}}</p>
+                <p>Събота: {{shop.shop_opens_sat}} -{{shop.shop_closes_sat}}</p>
+                <p>Неделя:{{shop.shop_opens_sun}} -{{shop.shop_closes_sun}}</p>
+            </div>
+        </info-window>

@@ -23,6 +23,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="#/manufacturers">Manufacturers</a></li>
                     <li><a href="#/cars">All cars</a></li>
+                    <li><a ng-click="mapDialog('lg')">Dealer map</a></li>
                 </ul>
                 <div class="nav navbar-nav navbar-right">
                     <ul class="nav navbar-nav">
@@ -52,6 +53,7 @@
     <script src="lib/bootstrap/ui-bootstrap-custom-tpls-0.13.0.js"></script>
     <script src="lib/angular-spinner.js"></script>
     <script src="lib/restangular.js"></script>
+    <script src="lib/ng-map.js"></script>
 
     <script src="js/app.js"></script>
     <script src="js/services/carsData.js"></script>
@@ -64,5 +66,6 @@
     <script src="js/controllers/ManufacturersController.js"></script>
     <script src="js/controllers/AddCarController.js"></script>
     <script src="js/controllers/AddManufacturerController.js"></script>
+    <script src="js/controllers/Dealers.js"></script>
 </body>
 </html>
