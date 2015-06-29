@@ -13,7 +13,6 @@ app.controller('AddCarController', function AddCarController($scope, carsDataSrv
         {
             console.log(addCarForm);
             $scope.status.error = "Wrong data";
-            //return;
         }
 
         $scope.status.error = "";

@@ -77,6 +77,7 @@ body {
 
 .car { margin: 0; }
 .car:hover + .comments {
+    z-index: 10;
     display: block;
 }
 

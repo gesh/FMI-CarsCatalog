@@ -15,7 +15,7 @@ app.factory('manufacturersData', function($http, $log, baseServiceUrl) {
 		postManufacturerData: function (manufacturer) {
 		    console.log(manufacturer);
 
-            $http.post(
+		    return $http.post(
                 baseServiceUrl + '/api/manufacturers',
                 JSON.stringify(manufacturer),
                 {
@@ -23,13 +23,7 @@ app.factory('manufacturersData', function($http, $log, baseServiceUrl) {
                         'Content-Type': 'application/json'
                     }
                 }
-            ).success(function (data) {
-                if(data){
-                	alert('success');
-                }
-            }).error(function(error){
-                console.log(error);
-            });
+            );
 		}
 	}
 

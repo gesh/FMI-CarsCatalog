@@ -35,6 +35,17 @@
 
                 </fieldset>
             </form>
+
+            <div ng-if="status.done && status.error === 1" class="alert text-danger text-center" style="margin: 0;">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span style="margin-right: 30px; ">Status: {{msg}}</span>
+                <button class="btn btn-default" type="button" ng-click="anotherOne()">Try again</button>
+            </div>
+            <div ng-if="status.done && status.error === 0" class="alert text-success text-center" style="margin: 0;">
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                <span style="margin-right: 30px; ">Status: {{msg}}</span>
+                <button class="btn btn-default" type="button" ng-click="anotherOne()">Continue</button>
+            </div>
         </div>
 
     </div>
