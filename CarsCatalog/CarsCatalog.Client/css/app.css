@@ -1,3 +1,7 @@
+html {
+    overflow-y: scroll;
+}
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
@@ -71,7 +75,16 @@ body {
     background-size: 1500px;
 }
 
-.image-icon {
-  width: 180px;
-  height: 180px;
+.car { margin: 0; }
+.car:hover + .comments {
+    display: block;
+}
+
+.comments {
+    padding: 15px;
+    background-color: #ffffff;
+    display: none;
+}
+.comments:hover {
+    display: block;
 }
